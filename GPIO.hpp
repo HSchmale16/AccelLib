@@ -41,6 +41,11 @@ void activatePin(GPIO_PIN_t pin);
  */
 void deactivatePin(GPIO_PIN_t pin);
 
+/** \brief deactivate all pins
+ * Unexports all the pins
+ */
+void clean();
+
 /** \brief sets a pin to be an input or output
  * \param pin - which pin to set
  * \param mode - the mode of the pin
@@ -88,8 +93,8 @@ GPIO_PIN_t GPIO_3 = "3",
  */
 namespace bbb
 {
-GPIO_PIN_t P8_01 = "P8_01"
-}
+
+} // End of BBB namespace
 
 } // End of GPIO namespace
 

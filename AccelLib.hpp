@@ -15,8 +15,16 @@ namespace acc
 
 // ========================= Structs ==========================================
 
+/** \brief describes an accelerometer's rotation in 3 dimensional space.
+ */
+struct Rotate3d
+{
+    int m_xRot;
+    int m_yRot;
+    int m_zRot;
+};
+
 /** \brief Struct to hold values of a 3d accelerometer
- *
  * This struct is holds the data to work with accelerometers
  */
 struct Accel3d
@@ -50,6 +58,10 @@ struct Accel3d
 int initAccel3d(gpio::GPIO_PIN_t x_pin, gpio::GPIO_PIN_t y_pin,
 				gpio::GPIO_PIN_t z_pin);
 
+/** \brief Get the rotation of an accelerometer instance by value.
+ * \param id - the id of the accelerometer to get the rotation of
+ */
+Rotate3d getRotation3d(int id);
 
 }// end namespace acc
 
