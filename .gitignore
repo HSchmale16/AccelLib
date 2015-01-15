@@ -1,0 +1,24 @@
+# Build Files
+obj/*
+bin/*
+*.o
+
+# Executables
+*.exe
+*.app
+
+# Compressed Files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip 
+
+# Log Files
+*.log
+*.sql
+*.sqlite
+*.db
