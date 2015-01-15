@@ -1,5 +1,5 @@
 #include <iostream>
-#include "GPIO.hpp"
+#include "AccelLib.hpp"
 
 int main()
 {

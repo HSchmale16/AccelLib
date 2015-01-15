@@ -17,12 +17,11 @@ namespace acc
 
 /** \brief Struct to hold values of a 3d accelerometer
  *
- * This struct is used to update the values of accelerometers. As well as check
- * the standard deviation from baseline
+ * This struct is holds the data to work with accelerometers
  */
 struct Accel3d
 {
-	int m_id;   /**< Id of that accelerometer */
+	const int m_id;   /**< Id of that accelerometer */
 	// Rotation
 	int m_xRot; /**< Rotation on x-axis */
 	int m_yRot; /**< Rotation on y-axis */
@@ -31,6 +30,10 @@ struct Accel3d
 	gpio::GPIO_PIN_t m_xPin; /**< Pin to read x-axis from */
 	gpio::GPIO_PIN_t m_yPin; /**< Pin to read y-axis from */
 	gpio::GPIO_PIN_t m_zPin; /**< Pin to read z-axis from */
+
+	// ctor
+	Accel3d(gpio::GPIO_PIN_t x, gpio::GPIO_PIN_t y,
+			gpio::GPIO_PIN_t z, int id);
 };
 
 // ========================= Functions =======================================
@@ -46,22 +49,6 @@ struct Accel3d
  */
 int initAccel3d(gpio::GPIO_PIN_t x_pin, gpio::GPIO_PIN_t y_pin,
 				gpio::GPIO_PIN_t z_pin);
-
-/** \brief Reads an accelerometer and  returns a modified struct containing the
-    data about that accelerometer
- * \param a3d - the struct to be modified
- * \param id - id number of that accelerometer
- * \return 0 on success
- *
- */
-int readAccel3d(Accel3d *a3d, int id);
-
-
-/** \brief updates an Accel3d instances based on the m_id
- * \param A3d - Accel3d instances to update
- * \return 0 on success,
- */
-int updateAccel3d(Accel3d *a3d);
 
 
 }// end namespace acc
