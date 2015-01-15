@@ -22,3 +22,11 @@ bin/*
 *.sql
 *.sqlite
 *.db
+
+# DoxyBlocks
+doxygen/*
+
+# Codeblocks
+*.cbp
+*.depend
+*.layout
