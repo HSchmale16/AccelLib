@@ -33,6 +33,7 @@
 		</Compiler>
 		<Unit filename="AccelLib.cpp" />
 		<Unit filename="AccelLib.hpp" />
+		<Unit filename="GPIO.cpp" />
 		<Unit filename="GPIO.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

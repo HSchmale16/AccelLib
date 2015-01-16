@@ -23,6 +23,8 @@ std::vector<gpio::GPIO_PIN_t> ExportedPins;
 
 // ================== IMPLEMENTATION ==========================================
 
+
+// ================== Namespace Member Functions ==============================
 // export a pin
 void gpio::activatePin(GPIO_PIN_t pin)
 {
@@ -100,7 +102,7 @@ gpio::GPIO_PIN_STATE_t gpio::digitalRead(GPIO_PIN_t pin)
 	return LOW;
 }
 
-// Write out an analog value
+// Write out an analog value, this will launch a
 void gpio::analogWrite(GPIO_PIN_t pin, int value)
 {
 

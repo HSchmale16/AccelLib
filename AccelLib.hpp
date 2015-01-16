@@ -63,6 +63,11 @@ int initAccel3d(gpio::GPIO_PIN_t x_pin, gpio::GPIO_PIN_t y_pin,
  */
 Rotate3d getRotation3d(int id);
 
+/** \brief gets the number of initialized accelerometer instances
+ * \return the number of accelerometer instances
+ */
+int getNumOfAccelerometers();
+
 }// end namespace acc
 
 #endif // ACCELLIB_HPP_INCLUDED
