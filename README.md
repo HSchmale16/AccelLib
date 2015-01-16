@@ -12,3 +12,6 @@ which creates a zip that you can import with the arduino ide.
 
 # Currently Supported Platforms
 * Arduino
+
+# Currently Supported Accelerometers
+* ADXL 3XX

@@ -4,15 +4,21 @@
  */
 
 #include "AccelLib.h"
-#include <vector>
-#include <fstream>
 
-// Vector to containing accelerometers
-static std::vector<acc::Accel3d> m_Accelerometers;
+// Arduino only stuff
+#ifdef ARDUINO
+#include "Arduino.h"
+#endif // ARDUINO
 
-// ===================== Structs Ctor Implementation ==========================
-acc::Accel3d::Accel3d(int x, int y, int z, int id)
-    : m_id(id), m_xPin(x), m_yPin(y), m_zPin(z) {}
+// ================    File Globals    =======================================
+static int NEXT_ACCEL_ID = 0; /**< next accelerometer id */
 
-// ===================== Member Function Implementation =======================
+// ================ Structs Ctor Imple =======================================
+acc::Accel::Accel(int pin)
+	:m_id(NEXT_ACCEL_ID), m_pin(pin)
+{
+    NEXT_ACCEL_ID++;
+}
+
+// ================  Function Imple    =======================================
 
