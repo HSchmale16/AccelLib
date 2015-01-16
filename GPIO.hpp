@@ -66,6 +66,17 @@ void digitalWrite(GPIO_PIN_t pin, GPIO_PIN_STATE_t state);
  */
 GPIO_PIN_STATE_t digitalRead(GPIO_PIN_t pin);
 
+/** \brief Writes a pwm signal to GPIO pin to create an analog output.
+ * \param pin- what pin to write to
+ */
+void analogWrite(GPIO_PIN_MODE_t pin);
+
+/** \brief Reads an analog value mapped between [0, 1024]
+ * \param pin - what pin to read
+ * The sample rate on this function is extremely limited and it's
+ * non-deterministic. (Not guarnteed to take the same-amount of time every call)
+ */
+int analogRead(GPIO_PIN_t pin);
 
 // ================ Devboard Namespces Declarations ===========================
 
