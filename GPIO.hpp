@@ -27,6 +27,9 @@ enum GPIO_PIN_MODE_t
 	GPIO_OUTPUT /**< Output mode */
 };
 
+const bool HIGH = true; /**< On State */
+const bool LOW = false; /**< Off State */
+
 // ========================= Functions ========================================
 /** \brief activates a pin
  * \param pin - the pin to export
