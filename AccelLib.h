@@ -7,8 +7,6 @@
  * @date January 15, 2015
  */
 
-#include "rPiGPIO.hpp"
-
 /// Functions to work with accelerometers live here!!
 namespace acc
 {
@@ -30,18 +28,17 @@ struct Rotate3d
 struct Accel3d
 {
 	const int m_id;   /**< Id of that accelerometer */
+	// Pins
+	int m_xPin; /**< Pin to read x-axis from */
+	int m_yPin; /**< Pin to read y-axis from */
+	int m_zPin; /**< Pin to read z-axis from */
 	// Rotation
 	int m_xRot; /**< Rotation on x-axis */
 	int m_yRot; /**< Rotation on y-axis */
 	int m_zRot; /**< Rotation on z-axis */
-	// Pins
-	gpio::GPIO_PIN_t m_xPin; /**< Pin to read x-axis from */
-	gpio::GPIO_PIN_t m_yPin; /**< Pin to read y-axis from */
-	gpio::GPIO_PIN_t m_zPin; /**< Pin to read z-axis from */
 
 	// ctor
-	Accel3d(gpio::GPIO_PIN_t x, gpio::GPIO_PIN_t y,
-			gpio::GPIO_PIN_t z, int id);
+	Accel3d(int x, int y, int z, int id);
 };
 
 // ========================= Functions =======================================
@@ -55,8 +52,7 @@ struct Accel3d
  * \return Returns the id of the initialized accelerometer, starting from 0
  * Adds a new instance
  */
-int initAccel3d(gpio::GPIO_PIN_t x_pin, gpio::GPIO_PIN_t y_pin,
-				gpio::GPIO_PIN_t z_pin);
+int initAccel3d(int x_pin, int y_pin, int z_pin);
 
 /** \brief Get the rotation of an accelerometer instance by value.
  * \param id - the id of the accelerometer to get the rotation of
