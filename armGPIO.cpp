@@ -3,7 +3,7 @@
  * @date January 15, 2015
  */
 
-#include "GPIO.hpp"
+#include "rPiGPIO.hpp"
 #include <fstream>
 #include <vector>
 #include <sstream>

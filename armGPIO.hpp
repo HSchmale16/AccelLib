@@ -16,6 +16,7 @@ namespace gpio
 {
 // ========================= TYPEDEFS  ========================================
 typedef std::string GPIO_PIN_t; /**< A GPIO Pin */
+
 typedef bool GPIO_PIN_STATE_t; /**< GPIO Pin State. Is it high or low?*/
 
 // ========================= CONSTANTS ========================================

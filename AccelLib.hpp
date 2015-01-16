@@ -7,7 +7,7 @@
  * @date January 15, 2015
  */
 
-#include "GPIO.hpp"
+#include "rPiGPIO.hpp"
 
 /// Functions to work with accelerometers live here!!
 namespace acc
