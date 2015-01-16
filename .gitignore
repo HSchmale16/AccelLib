@@ -1,7 +1,8 @@
-# Build Files
+# Build Files and Locations
 obj/*
 bin/*
 *.o
+AccelLib/* # dir used by make to create an arduino library zip
 
 # Executables
 *.exe
