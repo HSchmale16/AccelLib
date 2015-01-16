@@ -15,7 +15,7 @@
 namespace gpio
 {
 // ========================= TYPEDEFS  ========================================
-typedef const std::string GPIO_PIN_t; /**< A GPIO Pin */
+typedef std::string GPIO_PIN_t; /**< A GPIO Pin */
 typedef bool GPIO_PIN_STATE_t; /**< GPIO Pin State. Is it high or low?*/
 
 // ========================= CONSTANTS ========================================
@@ -70,23 +70,23 @@ GPIO_PIN_STATE_t digitalRead(GPIO_PIN_t pin);
  */
 namespace rPi
 {
-GPIO_PIN_t GPIO_3 = "3",
-		   GPIO_5 = "5",
-		   GPIO_7 = "7",
-		   GPIO_8 = "8",
-		   GPIO_10 = "10",
-		   GPIO_11 = "11",
-		   GPIO_12 = "12",
-		   GPIO_13 = "13",
-		   GPIO_15 = "14",
-		   GPIO_16 = "16",
-		   GPIO_18 = "18",
-		   GPIO_19 = "19",
-		   GPIO_21 = "21",
-		   GPIO_22 = "22",
-		   GPIO_23 = "23",
-		   GPIO_24 = "24",
-		   GPIO_26 = "26";
+const GPIO_PIN_t GPIO_3 = "3",
+				 GPIO_5 = "5",
+				 GPIO_7 = "7",
+				 GPIO_8 = "8",
+				 GPIO_10 = "10",
+				 GPIO_11 = "11",
+				 GPIO_12 = "12",
+				 GPIO_13 = "13",
+				 GPIO_15 = "14",
+				 GPIO_16 = "16",
+				 GPIO_18 = "18",
+				 GPIO_19 = "19",
+				 GPIO_21 = "21",
+				 GPIO_22 = "22",
+				 GPIO_23 = "23",
+				 GPIO_24 = "24",
+				 GPIO_26 = "26";
 } // End of rPi namespace
 
 /** \brief GPIO Pin Constants for the Beagle Bone Black
