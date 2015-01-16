@@ -68,8 +68,12 @@ GPIO_PIN_STATE_t digitalRead(GPIO_PIN_t pin);
 
 /** \brief Writes a pwm signal to GPIO pin to create an analog output.
  * \param pin- what pin to write to
+ * \param value - [0, 1024], voltage to output.
+ * This function will launch a seperate thread to perform Software GPIO by
+ * rapidIO.
+ * @todo Look up PWM frequencies for frequencies
  */
-void analogWrite(GPIO_PIN_MODE_t pin);
+void analogWrite(GPIO_PIN_t pin, int value);
 
 /** \brief Reads an analog value mapped between [0, 1024]
  * \param pin - what pin to read

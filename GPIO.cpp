@@ -100,3 +100,14 @@ gpio::GPIO_PIN_STATE_t gpio::digitalRead(GPIO_PIN_t pin)
 	return LOW;
 }
 
+// Write out an analog value
+void gpio::analogWrite(GPIO_PIN_t pin, int value)
+{
+
+}
+
+// read an analog value from a pin
+int gpio::analogRead(GPIO_PIN_t pin)
+{
+    return 0;
+}
