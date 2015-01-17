@@ -10,9 +10,9 @@
 
 // constants 
 const int UPDATE_DELAY = 500; // ms to wait between updates
-const int X_AXIS_PIN = A0;
-const int Y_AXIS_PIN = A1;
-const int Z_AXIS_PIN = A2;
+const int X_AXIS_PIN = A0;    // Pin to listen on for x-axis
+const int Y_AXIS_PIN = A1;    // "" y-axis
+const int Z_AXIS_PIN = A2;    // etc
 
 // globals
 acc::Accel accX1 = acc::initAccel(A0); // init by value
@@ -44,5 +44,7 @@ void loop()
 	Serial.println(accY1.m_currRot - accY1.m_prevRot);
 	Serial.print("dZ = "); // Z Axis
 	Serial.println(accZ1.m_currRot - accZ1.m_prevRot);
+	
+	// sleep
 	delay(UPDATE_DELAY);
 }
