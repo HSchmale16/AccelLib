@@ -7,7 +7,7 @@ OBJECTS=$(SOURCES:.cpp=.o)
 EXE=HolidayLights
 ARDUINO_BUILD_DIR=AccelLib/
 ARDUINO_ZIP=arduino.zip
-ARDUINO_EX_PATH=Examples/Arduino/
+ARDUINO_EX_PATH=Examples/Arduino/*
 
 
 all: arduino
@@ -18,7 +18,7 @@ arduino:
 	# copy files to arduino build dir
 	cp $(SOURCES) $(ARDUINO_BUILD_DIR)
 	cp $(HEADERS) $(ARDUINO_BUILD_DIR)
-	cp $(ARDUINO_EX_PATH) $(ARDUINO_BUILD_DIR)
+	cp -r $(ARDUINO_EX_PATH) $(ARDUINO_BUILD_DIR)/Examples
 	# zip that directory
 	zip -r $(ARDUINO_ZIP) $(ARDUINO_BUILD_DIR)
 	# perform clean up
