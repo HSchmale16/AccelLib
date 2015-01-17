@@ -15,3 +15,4 @@ which creates a zip that you can import with the arduino ide.
 
 # Currently Supported Accelerometers
 * ADXL 3XX
+* 5v Analog Accelerometers ( I think )
