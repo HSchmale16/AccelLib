@@ -10,8 +10,16 @@
  * for single board computers.
  */
 
+#define A0 0
+#define A1 1
+
+using namespace std;
+
 int main()
 {
-
-    return 0;
+	acc::Accel accX1 = acc::initAccel(A0); // init by value
+	acc::Accel accZ1;
+	acc::initAccel(&accZ1, A1);
+	cout << accZ1.m_id << " " << accX1.m_id;
+	return 0;
 }
