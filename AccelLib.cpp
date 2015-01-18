@@ -25,7 +25,7 @@ acc::Accel acc::initAccel(int pin)
 	myAccel.m_pin = pin;
 	myAccel.m_id = NEXT_ACCEL_ID++;
 	updateAccel(&myAccel); // get first read data
-    myAccel.m_initRot = myAccel.m_currRot;
+	myAccel.m_initRot = myAccel.m_currRot;
 	return myAccel;
 }
 
